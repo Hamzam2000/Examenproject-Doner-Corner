@@ -17,7 +17,14 @@
 				$row = $query->fetch(PDO::FETCH_ASSOC);
 				$_SESSION['username'] = $data['username'];
 				$_SESSION['id'] = $data['id'];
-				header("Location: platform.php");
+
+				if ($data['is_admin']) {
+                    header("Location: ewa.php");
+				    // admin
+                } else {
+                    header("Location: platform.php");
+                }
+
             } else {
 			    $msg = "Probeer het nog eens!";
 			}
