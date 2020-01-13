@@ -8,12 +8,14 @@
 
 		$username = ($_POST['username']);
 		$password = ($_POST['password']);
+        $hash = password_hash($password, PASSWORD_DEFAULT);
 
-		$query = $conn->query("SELECT * FROM user WHERE username='$username'");
+		$query = $conn->prepare("SELECT * FROM user WHERE username='$username'");
+
 		if ($query->rowCount() > 0) {
-			
+            $query->execute();
 			$data = $query->fetch(PDO::FETCH_ASSOC);
-		    if (md5($password) == $data['password']) {
+		    if (password_verify($password, $hash)) {
 				$row = $query->fetch(PDO::FETCH_ASSOC);
 				$_SESSION['username'] = $data['username'];
 				$_SESSION['id'] = $data['id'];

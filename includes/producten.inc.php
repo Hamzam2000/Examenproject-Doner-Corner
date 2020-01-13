@@ -31,7 +31,7 @@ if(isset($_POST["addProducts"]))
         }
         else
         {
-            echo '<script>alert("Item Already Added")</script>';
+            echo '<script>alert("Item Already added")</script>';
             echo '<script>window.location="producten.php"</script>';
         }
     }
@@ -46,6 +46,12 @@ if(isset($_POST["addProducts"]))
         $_SESSION["shopping_cart"][0] = $item_array;
     }
 }
+
+if(isset($_POST["add"]))
+{
+
+}
+
 if(isset($_POST["deleteProducts"]))
 {
     if($_POST["deleteProducts"] == "delete")

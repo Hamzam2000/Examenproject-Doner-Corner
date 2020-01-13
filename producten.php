@@ -81,10 +81,10 @@ include "includes/producten.inc.php";
                     ?>
                     <tr>
                         <td><?php echo $values["Name"]; ?></td>
-                        <td><?php echo $values["quantity"]; ?></td>
+                        <td><?php echo $values["quantity"]; ?> <input align="right" type="submit" name="add" style="margin-top:5px;" class="btn btn-warning" value="+" /></td>
                         <td>$ <?php echo $values["price"]; ?></td>
                         <td>$ <?php echo number_format($values["quantity"] * $values["price"], 2); ?></td>
-                        <td><input type="submit" name="deleteProducts" style="margin-top:5px;" class="btn btn-danger" value="Verwijderen" /></td>
+                        <td><input type="submit" name="deleteProducts" class="btn btn-danger" value="Verwijderen" /></td>
 
                     </tr>
                     <?php
