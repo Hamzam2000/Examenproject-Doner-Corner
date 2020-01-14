@@ -80,6 +80,7 @@ include "includes/producten.inc.php";
                     var_dump($values);
                     ?>
                     <tr>
+                        <input type="hidden" name="Id" value="<?php echo $keys; ?>" />
                         <td><?php echo $values["Name"]; ?></td>
                         <td><?php echo $values["quantity"]; ?> <input align="right" type="submit" name="add" style="margin-top:5px;" class="btn btn-warning" value="+" /></td>
                         <td>$ <?php echo $values["price"]; ?></td>
@@ -87,10 +88,13 @@ include "includes/producten.inc.php";
                         <td><input type="submit" name="deleteProducts" class="btn btn-danger" value="Verwijderen" /></td>
 
                     </tr>
+
                     <?php
                     $total = $total + ($values["quantity"] * $values["price"]);
                 }
                 ?>
+        </form>
+        <form method="post" action="gegevensUser.php">
                 <tr>
 
                     <td colspan="3" align="right">Total</td>

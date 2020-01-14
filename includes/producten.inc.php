@@ -54,8 +54,7 @@ if(isset($_POST["add"]))
 
 if(isset($_POST["deleteProducts"]))
 {
-    if($_POST["deleteProducts"] == "delete")
-    {
+
         foreach($_SESSION["shopping_cart"] as $keys => $values)
         {
             if($values["Id"] == $_POST["Id"])
@@ -65,6 +64,12 @@ if(isset($_POST["deleteProducts"]))
                 echo '<script>window.location="producten.php"</script>';
             }
         }
-    }
+
+}
+
+if(isset($_POST["payOrder"]))
+{
+            echo '<script>window.location="gegevensUser.php</script>';
+
 }
 ?>
