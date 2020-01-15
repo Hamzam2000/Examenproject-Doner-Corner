@@ -5,7 +5,7 @@ $conn = getdb();
 $msg = "";
 
 if (isset($_POST['Betalen'])) {
-    $name = ($_POST['name']);
+    $naam = ($_POST['naam']);
     $email = ($_POST['email']);
     $phonenumber = ($_POST['phonenumber']);
     $companyname = ($_POST['companyname']);
@@ -16,10 +16,10 @@ if (isset($_POST['Betalen'])) {
     $products = "";
     $remarks = ($_POST['remarks']);
     $paymentOption = ($_POST['paymentOption']);
-    $total = ($_POST['totalPrice']);
+    /*$total = ($_POST['totalPrice']);*/
 
-    $conn->query("INSERT INTO order (name,email,phonenumber,companyname,adress,postcode,city,delivery_time,products,remarks,paymentOption,totalPrice) VALUES ('$name', '$email', '$phonenumber', '$companyname', '$adress', '$postcode', '$city', '$delivery_time', '$products', '$remarks', '$paymentOption', '$total')");
-    echo '<script>window.location="Betalen.php"</script>';
+    $conn->query("INSERT INTO order (naam,email,phonenumber,companyname,adress,postcode,city,delivery_time,products,remarks,paymentOption) VALUES ('$naam', '$email', '$phonenumber', '$companyname', '$adress', '$postcode', '$city', '$delivery_time', '$products', '$remarks', '$paymentOption')");
+    header("Location: Betalen.php");
 
 }
 ?>

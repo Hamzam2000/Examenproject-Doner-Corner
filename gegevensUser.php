@@ -37,14 +37,13 @@ include "includes/gegevensUser.inc.php";
 </header>
 <br>
 <div class="container">
-
+    <form method="post" action="gegevensUser.php">
     <div class="row">
         <div class="col-md-6 order-md-2 mb-4">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-muted">Jouw bestelling</span>
             </h4>
             <hr>
-                <form method="post" action="producten.php">
                     <table class="table table-bordered">
                         <tr>
                             <th>Item Name</th>
@@ -71,9 +70,7 @@ include "includes/gegevensUser.inc.php";
                             $total = $total + ($values["quantity"] * $values["price"]);
                         }
                         ?>
-                </form>
 
-                <form method="post" action="gegevensUser.php">
                     <tr>
 
                         <td colspan="3" align="right">Total</td>
@@ -83,7 +80,6 @@ include "includes/gegevensUser.inc.php";
                     }
                     ?>
                     </table>
-                </form>
             <div>
                 <button onclick="window.location.href = 'producten.php';">Bestelling veranderen</button>
             </div>
@@ -96,25 +92,18 @@ include "includes/gegevensUser.inc.php";
                     <option>Contant</option>
                 </select>
             </div>
-            <form class="card p-2">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Promo code">
-                    <form method="post" action="Betalen.php">
-                    <div class="input-group-append">
-                        <input align="right" type="submit" name="Betalen" class="btn btn-secondary" value="Betalen" />
-                    </div>
-                    </form>
+                        <button name="Betalen" type="submit" class="btn btn-secondary">Betalen</button>
                 </div>
-            </form>
         </div>
         <div class="col-md-6 order-md-1">
             <h4 class="mb-3">Jouw gegevens</h4>
             <hr>
-            <form class="needs-validation" novalidate="">
                 <div class="row">
                     <div class="col-md-12 mb-3">
                         <label for="firstName">Naam</label>
-                        <input name="name" type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                        <input name="naam" type="text" class="form-control" id="firstName" placeholder="" value="" required="">
                         <div class="invalid-feedback">
                             Valid first name is required.
                         </div>
@@ -185,7 +174,6 @@ include "includes/gegevensUser.inc.php";
                     <label for="comment">Opmerking:</label>
                     <textarea name="remarks" class="form-control" rows="5" id="comment"></textarea>
                 </div>
-                </form>
 
                 <hr class="mb-4">
 
