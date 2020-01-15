@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 08 jan 2020 om 10:54
+-- Gegenereerd op: 14 jan 2020 om 01:10
 -- Serverversie: 10.1.37-MariaDB
 -- PHP-versie: 7.2.5
 
@@ -157,7 +157,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`Id`, `username`, `email`, `password`, `adress`, `create_time`, `is_admin`) VALUES
 (1, 'Hamza', '', 'd41d8cd98f00b204e9800998ecf8427e', '', '2020-01-07 12:17:51', 1),
 (2, 'hamza2000', 'hamza.games2000@hotmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'tester', '2020-01-07 13:28:35', NULL),
-(3, 'HamzaM', 'tester@bureauvk.nl', '827ccb0eea8a706c4c34a16891f84e7b', 'tester', '2020-01-07 13:36:30', 1);
+(3, 'HamzaM', 'tester@bureauvk.nl', '827ccb0eea8a706c4c34a16891f84e7b', 'tester', '2020-01-07 13:36:30', 1),
+(16, 'Amine', 'Amine@hotmail.com', '$2y$10$IL4oZsaw1yF3jHFvFhqYouYU3', 'jojo25', '2020-01-13 00:17:51', NULL);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -214,7 +215,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT voor een tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Beperkingen voor geëxporteerde tabellen

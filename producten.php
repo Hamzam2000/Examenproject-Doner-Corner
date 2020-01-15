@@ -99,7 +99,7 @@ include "includes/producten.inc.php";
 
                     <td colspan="3" align="right">Total</td>
                     <td align="right">$ <?php echo number_format($total, 2); ?></td>
-                    <td><input align="center" type="submit" name="payOrder" class="btn btn-warning" value="Betalen" /></td>
+                    <td><input align="center" type="submit" name="payOrder" class="btn btn-warning" value="Bestellen" /></td>
                 </tr>
                 <?php
             }

@@ -49,7 +49,10 @@ if(isset($_POST["addProducts"]))
 
 if(isset($_POST["add"]))
 {
-
+    foreach($_SESSION["shopping_cart"] as $keys => $values)
+    {
+      $values["quantity"]++;
+    }
 }
 
 if(isset($_POST["deleteProducts"]))
