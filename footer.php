@@ -11,10 +11,13 @@
             <div class="col-md-4 mx-auto">
 
                 <!-- Content -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
-                <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                    consectetur
-                    adipisicing elit.</p>
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Doner Corner</h5>
+                <p>De lekkerste eten bestel je hier bij Doner Corner:</p>
+                <p>1. Alles is 100% halal.</p>
+                <p>2. snel en lekker eten.</p>
+                <p>3. goede service want klant is koning.</p>
+
+
 
             </div>
             <!-- Grid column -->
@@ -29,16 +32,16 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!">Link 1</a>
+                        <a href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="#!">Link 2</a>
+                        <a href="Inlog.php">inloggen</a>
                     </li>
                     <li>
-                        <a href="#!">Link 3</a>
+                        <a href="register.php">registreren</a>
                     </li>
                     <li>
-                        <a href="#!">Link 4</a>
+                        <a href="producten.php">Bestellen</a>
                     </li>
                 </ul>
 
@@ -49,50 +52,10 @@
 
             <!-- Grid column -->
             <div class="col-md-2 mx-auto">
+                <br>
+                <br>
+                <img src="image/logo.png" width="200" height="100" alt="">
 
-                <!-- Links -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="#!">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 4</a>
-                    </li>
-                </ul>
-
-            </div>
-            <!-- Grid column -->
-
-            <hr class="clearfix w-100 d-md-none">
-
-            <!-- Grid column -->
-            <div class="col-md-2 mx-auto">
-
-                <!-- Links -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="#!">Link 1</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 2</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 3</a>
-                    </li>
-                    <li>
-                        <a href="#!">Link 4</a>
-                    </li>
-                </ul>
 
             </div>
             <!-- Grid column -->
@@ -108,10 +71,10 @@
     <!-- Call to action -->
     <ul class="list-unstyled list-inline text-center py-2">
         <li class="list-inline-item">
-            <h5 class="mb-1">Register for free</h5>
+            <h5 class="mb-1">Maak nu een account aan!</h5>
         </li>
         <li class="list-inline-item">
-            <a href="#!" class="btn btn-warning btn-rounded">Sign up!</a>
+            <a href="register.php" class="btn btn-warning btn-rounded">registreren</a>
         </li>
     </ul>
     <!-- Call to action -->
@@ -149,8 +112,8 @@
     <!-- Social buttons -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/education/bootstrap/"> Hamza en Amine</a>
     </div>
     <!-- Copyright -->
 

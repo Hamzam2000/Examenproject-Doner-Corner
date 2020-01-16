@@ -21,8 +21,13 @@
                     Inloggen
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="inlog.php">Inloggen als Klant</a>
-                    <a class="dropdown-item" href="Inlog.php">Inloggen als beheerder</a>
+                    <a class="dropdown-item" href="Inlog.php">Inloggen</a>
+                    <a class="dropdown-item" href="register.php">registreren</a>
+                    <?php
+                    if(isset($_SESSION['logged'])) {
+                        echo ">Uitloggen</a>";
+                    }
+                    ?>
                 </div>
             </li>
         </ul>

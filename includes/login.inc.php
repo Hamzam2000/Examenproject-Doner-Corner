@@ -10,10 +10,9 @@
 		$password = ($_POST['password']);
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
-		$query = $conn->prepare("SELECT * FROM user WHERE username='$username'");
+		$query = $conn->query("SELECT * FROM user WHERE username='$username'");
 
 		if ($query->rowCount() > 0) {
-            $query->execute();
 			$data = $query->fetch(PDO::FETCH_ASSOC);
 		    if (password_verify($password, $hash)) {
 				$row = $query->fetch(PDO::FETCH_ASSOC);
@@ -21,10 +20,11 @@
 				$_SESSION['id'] = $data['id'];
 
 				if ($data['is_admin']) {
-                    header("Location: ewa.php");
+                    header("Location: ./platform.php");
 				    // admin
                 } else {
-                    header("Location: platform.php");
+                    $_SESSION['logged'] = true;
+                    header("Location: ./index.php");
                 }
 
             } else {
