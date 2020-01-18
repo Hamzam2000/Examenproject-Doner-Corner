@@ -2,10 +2,11 @@
 
 require './database.php';
 
-$dbhandle = new mysqli('localhost','root','','cloudstorage');
+$dbhandle = new mysqli('localhost','root','','dcveen');
 echo $dbhandle->connect_error;
-$query = "SELECT `fileMime`, COUNT(fileId) FROM file group by `fileMime`";
+$query = "SELECT `paymentOption`, COUNT(Id) FROM `order` group by `paymentOption`";
 $res = $dbhandle->query($query);
+
 
 
 ?>

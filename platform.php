@@ -42,12 +42,12 @@ include 'includes/platform.inc.php';
     function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-            ['fileMime', 'fileSize'],
+            ['paymentOption', 'Succeed'],
 
             <?php
             while($row=$res->fetch_assoc())
             {
-                echo "['".$row['fileMime']."',".$row['COUNT(fileId)']."],";
+                echo "['".$row['paymentOption']."',".$row['COUNT(Id)']."],";
             }
 
             ?>
@@ -55,7 +55,7 @@ include 'includes/platform.inc.php';
         ]);
 
         var options = {
-            title: 'Meest Geupload van bestanden',
+            title: 'Meest Gekochte producten',
             is3D:true,
         };
 
