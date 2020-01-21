@@ -39,24 +39,24 @@
 
     <div class="form-group">
       <label for="inputName">Username</label>
-      <input name="username" type="text" class="form-control" id="inputName" placeholder="Username">
+      <input name="username" type="text" class="form-control" id="inputName" placeholder="Username" required>
   </div>
     <div class="form-group">
       <label for="inputEmail4">Email</label>
-      <input name="email" type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <input name="email" type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
     </div>
 	  <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputPassword4">Wachtwoord</label>
-      <input name="password" type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      <input name="password" type="password" class="form-control" id="inputPassword4" placeholder="Password" required>
     </div>
 	    <div class="form-group col-md-6">
       <label for="inputPassword4">Bevestig Wachtwoord</label>
-      <input name="CPassword" type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      <input name="CPassword" type="password" class="form-control" id="inputPassword4" placeholder="Password" required>
     </div>
 	</div>
     <label for="inputAddress">Adres</label>
-    <input name="adress" type="text" class="form-control" id="inputAddress" placeholder="Adres">
+    <input name="adress" type="text" class="form-control" id="inputAddress" placeholder="Adres" required>
   <div class="form-group">
     <div class="form-check">
     </div>

@@ -2,11 +2,20 @@
 
 require './database.php';
 
-$dbhandle = new mysqli('localhost','root','','dcveen');
-echo $dbhandle->connect_error;
-$query = "SELECT `paymentOption`, COUNT(Id) FROM `order` group by `paymentOption`";
-$res = $dbhandle->query($query);
+function getOrders(){
+    $conn = getdb();
+    $stmt = $conn->prepare("SELECT `naam`, `email`, `phonenumber`, `companyname`, `adress`, `postcode`, `city`, `delivery_time`, `products`, `remarks`, `paymentOption`, `totalPrice`, `Succeed`, `User_Id` FROM `order` WHERE `Succeed` = '0' ORDER BY `delivery_time`");
+    $stmt->execute();
+    $result = $stmt->fetchAll();
+    return $result;
+}
 
-
+function getDoneOrders(){
+    $conn = getdb();
+    $stmt = $conn->prepare("SELECT `naam`, `email`, `phonenumber`, `companyname`, `adress`, `postcode`, `city`, `delivery_time`, `products`, `remarks`, `paymentOption`, `totalPrice`, `Succeed`, `User_Id` FROM `order` WHERE `Succeed` = '1' ORDER BY `delivery_time`");
+    $stmt->execute();
+    $result = $stmt->fetchAll();
+    return $result;
+}
 
 ?>

@@ -10,7 +10,9 @@
 		$password = ($_POST['password']);
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
-		$query = $conn->query("SELECT * FROM user WHERE username='$username'");
+        $query = $conn->prepare("SELECT * FROM user WHERE username < :username");
+        $query->bindParam(':username', $username, PDO::PARAM_STR);
+        $query->execute();
 
 		if ($query->rowCount() > 0) {
 			$data = $query->fetch(PDO::FETCH_ASSOC);

@@ -20,7 +20,7 @@ if(isset($_POST["addProducts"]))
 
         if(!in_array($_POST["Id"], $item_array_id))
         {
-            $count = count($_SESSION["shopping_cart"]);
+            $count = count($item_array_id);
             $item_array = array(
                 'Id'               =>     $_POST["Id"],
                 'Name'               =>     $_POST["Name"],
@@ -31,7 +31,12 @@ if(isset($_POST["addProducts"]))
         }
         else
         {
-            echo '<script>alert("Item Already added")</script>';
+            foreach ($_SESSION["shopping_cart"] as $key => $p) {
+                if ($p['Id'] === $_POST["Id"]) {
+                    $_SESSION["shopping_cart"][$key]['quantity'] += $_POST["quantity"];
+                }
+            }
+
             echo '<script>window.location="producten.php"</script>';
         }
     }
@@ -49,15 +54,22 @@ if(isset($_POST["addProducts"]))
 
 if(isset($_POST["add"]))
 {
-    foreach($_SESSION["shopping_cart"] as $keys => $values)
+    foreach($_SESSION["shopping_cart"] as $key => $values)
     {
-      $values["quantity"]++;
+        $_SESSION["shopping_cart"][$key]['quantity']++;
+    }
+}
+
+if(isset($_POST["min"]))
+{
+    foreach($_SESSION["shopping_cart"] as $key => $values)
+    {
+        $_SESSION["shopping_cart"][$key]['quantity']--;
     }
 }
 
 if(isset($_POST["deleteProducts"]))
 {
-
         foreach($_SESSION["shopping_cart"] as $keys => $values)
         {
             if($values["Id"] == $_POST["Id"])

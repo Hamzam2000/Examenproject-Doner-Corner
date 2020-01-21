@@ -18,7 +18,8 @@ if (isset($_POST['Betalen'])) {
     $paymentOption = ($_POST['paymentOption']);
     /*$total = ($_POST['totalPrice']);*/
 
-    $conn->query("INSERT INTO order (naam,email,phonenumber,companyname,adress,postcode,city,delivery_time,products,remarks,paymentOption) VALUES ('$naam', '$email', '$phonenumber', '$companyname', '$adress', '$postcode', '$city', '$delivery_time', '$products', '$remarks', '$paymentOption')");
+    $conn->prepare("INSERT INTO order (naam,email,phonenumber,companyname,adress,postcode,city,delivery_time,products,remarks,paymentOption) VALUES ($naam, $email, $phonenumber, $companyname, $adress, $postcode, $city, $delivery_time, $products, $remarks, $paymentOption)");
+    $conn->execute();
     header("Location: Betalen.php");
 
 }
