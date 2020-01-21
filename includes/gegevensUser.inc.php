@@ -12,14 +12,14 @@ if (isset($_POST['Betalen'])) {
     $adress = ($_POST['adress']);
     $postcode = ($_POST['postcode']);
     $city = ($_POST['city']);
-    $delivery_time = ($_POST['delivery_time']);
-    $products = "";
+    $delivery_time = date($_POST['delivery_time']);
+    $products = ($_POST['products']);
     $remarks = ($_POST['remarks']);
     $paymentOption = ($_POST['paymentOption']);
-    /*$total = ($_POST['totalPrice']);*/
+    $total = ($_POST['totalPrice']);
 
-    $conn->prepare("INSERT INTO order (naam,email,phonenumber,companyname,adress,postcode,city,delivery_time,products,remarks,paymentOption) VALUES ($naam, $email, $phonenumber, $companyname, $adress, $postcode, $city, $delivery_time, $products, $remarks, $paymentOption)");
-    $conn->execute();
+    $stmt = $conn->prepare("INSERT INTO `order` (naam,email,phonenumber,companyname,adress,postcode,city,delivery_time,products,remarks,paymentOption,totalPrice) VALUES ('$naam', '$email', '$phonenumber', '$companyname', '$adress', '$postcode', '$city', '$delivery_time', '$products', '$remarks', '$paymentOption','$total')");
+    $stmt->execute();
     header("Location: Betalen.php");
 
 }

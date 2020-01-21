@@ -51,6 +51,7 @@ include "includes/gegevensUser.inc.php";
                             <th>Price</th>
                             <th>Total</th>
                         </tr>
+
                         <?php
                         if(!empty($_SESSION["shopping_cart"]))
                         {
@@ -60,7 +61,7 @@ include "includes/gegevensUser.inc.php";
                             ?>
                             <tr>
                                 <input type="hidden" name="Id" value="<?php echo $keys; ?>" />
-                                <td><?php echo $values["Name"]; ?></td>
+                                <td><input name="products" type="tel" value="<?php echo $values["Name"]; ?>"/></td>
                                 <td><?php echo $values["quantity"]; ?>
                                 <td>$ <?php echo $values["price"]; ?></td>
                                 <td>$ <?php echo number_format($values["quantity"] * $values["price"], 2); ?></td>
@@ -74,7 +75,7 @@ include "includes/gegevensUser.inc.php";
                     <tr>
 
                         <td colspan="3" align="right">Total</td>
-                        <td name="totalPrice" align="right">$ <?php echo number_format($total, 2); ?></td>
+                        <td align="right"><input name="totalPrice" type="tel" value="<?php echo number_format($total, 2); ?>"/></td>
                     </tr>
                     <?php
                     }
@@ -154,19 +155,19 @@ include "includes/gegevensUser.inc.php";
 
                 <div class="mb-3">
                     <label for="deliveryTime">Wanneer wil je je bestelling?</label>
-                    <select name="delivery_time" id="deliveryTime" class="form-control">
+                    <select name="delivery_time" id="deliveryTime" class="form-control" required="">
                         <option selected>Zo snel mogelijk</option>
-                        <option>16:00</option>
-                        <option>16:30</option>
-                        <option>17:00</option>
-                        <option>17:30</option>
-                        <option>18:00</option>
-                        <option>18:30</option>
-                        <option>19:00</option>
-                        <option>19:30</option>
-                        <option>20:00</option>
-                        <option>20:30</option>
-                        <option>21:00</option>
+                        <option>16:00:00</option>
+                        <option>16:30:00</option>
+                        <option>17:00:00</option>
+                        <option>17:30:00</option>
+                        <option>18:00:00</option>
+                        <option>18:30:00</option>
+                        <option>19:00:00</option>
+                        <option>19:30:00</option>
+                        <option>20:00:00</option>
+                        <option>20:30:00</option>
+                        <option>21:00:00</option>
                     </select>
                 </div>
 
