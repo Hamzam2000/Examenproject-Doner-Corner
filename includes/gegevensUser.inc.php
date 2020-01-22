@@ -44,7 +44,6 @@ if (isset($_POST['Betalen'])) {
                                             VALUES ('$payment->id','$naam', '$email', '$phonenumber', '$companyname', '$adress', '$postcode', '$city', '$delivery_time', '$products', '$remarks', '$paymentOption','$total')");
     $stmt->execute();
 
-
     header("Location: " . $payment->getCheckoutUrl(), true, 303);
 }
 ?>
