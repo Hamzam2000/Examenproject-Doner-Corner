@@ -40,7 +40,7 @@ require 'includes/login.inc.php';
 
             <div class="form-group">
                 <label for="inputName">Username</label>
-                <input name="email" type="text" class="form-control" id="exampleInputEmail1" placeholder="email" required>
+                <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="email" required>
                 <small id="emailHelp" class="form-text text-muted">*Al jou gegevens zijn veilig bij ons.</small>
             </div>
             <div class="form-group">
