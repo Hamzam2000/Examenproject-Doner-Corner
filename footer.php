@@ -12,7 +12,7 @@
 
                 <!-- Content -->
                 <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Doner Corner</h5>
-                <p>De lekkerste eten bestel je hier bij Doner Corner:</p>
+                <p>Het lekkerste eten bestel je hier bij Doner Corner:</p>
                 <p>1. Alles is 100% halal.</p>
                 <p>2. snel en lekker eten.</p>
                 <p>3. goede service want klant is koning.</p>
