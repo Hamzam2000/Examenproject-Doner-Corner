@@ -1,6 +1,7 @@
 <?php
 
 require_once './database.php';
+require_once  "./vendor/autoload.php";
 $conn = getdb();
 $msg = "";
 
@@ -18,9 +19,32 @@ if (isset($_POST['Betalen'])) {
     $paymentOption = ($_POST['paymentOption']);
     $total = ($_POST['totalPrice']);
 
-    $stmt = $conn->prepare("INSERT INTO `order` (naam,email,phonenumber,companyname,adress,postcode,city,delivery_time,products,remarks,paymentOption,totalPrice) VALUES ('$naam', '$email', '$phonenumber', '$companyname', '$adress', '$postcode', '$city', '$delivery_time', '$products', '$remarks', '$paymentOption','$total')");
-    $stmt->execute();
-    header("Location: Betalen.php");
 
+    $mollie = new \Mollie\Api\MollieApiClient();
+    $mollie->setApiKey("test_dGNuACWnVCVnCfkhdqjsdWgkKQyjcV");
+    $payment = $mollie->payments->create([
+        "amount" => [
+            "currency" => "EUR",
+            "value" => $total // You must send the correct number of decimals, thus we enforce the use of strings
+        ],
+        "description" => $products,
+        "redirectUrl" => "http://localhost/Examenproject%20D%C3%B6ner%20corner/Website%20D%C3%B6ner%20corner/Website/Betalen.php",
+        "webhookUrl" => "https://webshop.example.org/payments/webhook/",
+        "metadata" => [
+            "order_id" => "12345",
+        ],
+    ]);
+
+    $_SESSION["order"] = $payment->id;
+
+
+
+    $stmt = $conn->prepare("INSERT INTO `order` 
+                                                    (payment_id,naam,email,phonenumber,companyname,adress,postcode,city,delivery_time,products,remarks,paymentOption,totalPrice) 
+                                            VALUES ('$payment->id','$naam', '$email', '$phonenumber', '$companyname', '$adress', '$postcode', '$city', '$delivery_time', '$products', '$remarks', '$paymentOption','$total')");
+    $stmt->execute();
+
+
+    header("Location: " . $payment->getCheckoutUrl(), true, 303);
 }
 ?>

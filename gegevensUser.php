@@ -2,7 +2,7 @@
 
 include "includes/producten.inc.php";
 include "includes/gegevensUser.inc.php";
-
+require_once __DIR__ . "/vendor/autoload.php";
 
 ?>
 
@@ -56,12 +56,13 @@ include "includes/gegevensUser.inc.php";
                         if(!empty($_SESSION["shopping_cart"]))
                         {
                         $total = 0;
+                        $products="";
                         foreach($_SESSION["shopping_cart"] as $keys => $values)
                         {
                             ?>
                             <tr>
                                 <input type="hidden" name="Id" value="<?php echo $keys; ?>" />
-                                <td><input name="products" type="tel" value="<?php echo $values["Name"]; ?>"/></td>
+                                <td><?php echo $values["Name"]; ?></td>
                                 <td><?php echo $values["quantity"]; ?>
                                 <td>$ <?php echo $values["price"]; ?></td>
                                 <td>$ <?php echo number_format($values["quantity"] * $values["price"], 2); ?></td>
@@ -69,13 +70,14 @@ include "includes/gegevensUser.inc.php";
 
                             <?php
                             $total = $total + ($values["quantity"] * $values["price"]);
+                            $products = $products . $values["Name"] . " - " . $values["quantity"] . "x;";
                         }
                         ?>
 
                     <tr>
-
+                        <input type="hidden" name="products" value="<?php echo $products; ?>">
                         <td colspan="3" align="right">Total</td>
-                        <td align="right"><input name="totalPrice" type="tel" value="<?php echo number_format($total, 2); ?>"/></td>
+                        <td align="right"><input name="totalPrice" type="hidden" value="<?php echo number_format($total, 2); ?>"/><?php echo number_format($total, 2); ?></td>
                     </tr>
                     <?php
                     }
