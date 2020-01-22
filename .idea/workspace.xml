@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aec2eaf3-e3d4-4b64-b036-1957d15a1b5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Betalen.php" beforeDir="false" afterPath="$PROJECT_DIR$/Betalen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Inlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/Inlog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Statistiek.php" beforeDir="false" afterPath="$PROJECT_DIR$/Statistiek.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gegevensUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/gegevensUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/gegevensUser.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/gegevensUser.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/login.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/login.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/platform.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/platform.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/statistiek.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/statistiek.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/dcveen.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/dcveen.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Statistiek.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+            <state relative-caret-position="607">
+              <caret line="75" column="27" lean-forward="true" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -247,12 +240,12 @@
       <workItem from="1578265479659" duration="32779000" />
       <workItem from="1578481587474" duration="127000" />
       <workItem from="1578482590319" duration="44120000" />
-      <workItem from="1579137450700" duration="50750000" />
+      <workItem from="1579137450700" duration="51077000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145927000" />
+    <option name="totallyTimeSpent" value="146254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -628,8 +621,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Statistiek.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+        <state relative-caret-position="607">
+          <caret line="75" column="27" lean-forward="true" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#html#0;n#!!top" expanded="true" />
           </folding>

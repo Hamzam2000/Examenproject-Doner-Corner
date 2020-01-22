@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 14 jan 2020 om 01:10
+-- Gegenereerd op: 22 jan 2020 om 10:02
 -- Serverversie: 10.1.37-MariaDB
 -- PHP-versie: 7.2.5
 
@@ -68,20 +68,43 @@ INSERT INTO `category` (`category_id`, `name`) VALUES
 
 CREATE TABLE `order` (
   `Id` int(11) NOT NULL,
-  `name` varchar(45) DEFAULT NULL,
+  `payment_id` int(11) NOT NULL,
+  `naam` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `phonenumber` varchar(45) DEFAULT NULL,
   `companyname` varchar(45) DEFAULT NULL,
   `adress` varchar(45) DEFAULT NULL,
   `postcode` varchar(45) DEFAULT NULL,
   `city` varchar(45) DEFAULT NULL,
-  `delivery_time` timestamp NULL DEFAULT NULL,
-  `products` varchar(255) DEFAULT NULL,
+  `products` varchar(255) NOT NULL,
+  `delivery_time` time DEFAULT NULL,
   `remarks` varchar(255) DEFAULT NULL,
   `paymentOption` varchar(45) DEFAULT NULL,
-  `totalPrice` decimal(10,0) DEFAULT NULL,
-  `Succeed` tinyint(4) DEFAULT NULL,
-  `User_Id` int(11) NOT NULL
+  `totalPrice` decimal(6,2) DEFAULT NULL,
+  `Succeed` tinyint(4) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `order`
+--
+
+INSERT INTO `order` (`Id`, `payment_id`, `naam`, `email`, `phonenumber`, `companyname`, `adress`, `postcode`, `city`, `products`, `delivery_time`, `remarks`, `paymentOption`, `totalPrice`, `Succeed`) VALUES
+(18, 0, 'hamza', 'max@hotmail.com', '0612345678', 'maxbv', '1234', '3904tj', 'veen', 'Kapsalon groot - 1x;Broodje doner - 3x;Durum doner met kaas - 2x;', '19:30:00', 'jojo', 'Contant', '35.00', 0),
+(19, 0, 'hamza', 'max@hotmail.com', '0612345678', 'maxbv', '1234', '3904tj', 'veen', 'Kapsalon groot - 2x;', '21:00:00', 'jojo', 'Pinpas', '13.00', 0),
+(20, 0, 'hamza', 'max@hotmail.com', '0612345678', 'maxbv', '1234', '3904tj', 'veen', 'Kapsalon groot - 2x;Durum doner met kaas - 2x;', '19:00:00', 'jojo', 'Pinpas', '25.00', 0),
+(21, 0, 'hamza', 'max@hotmail.com', '0612345678', 'maxbv', '1234', '3904tj', 'veen', 'Kapsalon groot - 2x;Durum doner met kaas - 2x;', '20:00:00', 'jojo', 'Pinpas', '25.00', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `order_product`
+--
+
+CREATE TABLE `order_product` (
+  `id` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -158,7 +181,9 @@ INSERT INTO `user` (`Id`, `username`, `email`, `password`, `adress`, `create_tim
 (1, 'Hamza', '', 'd41d8cd98f00b204e9800998ecf8427e', '', '2020-01-07 12:17:51', 1),
 (2, 'hamza2000', 'hamza.games2000@hotmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'tester', '2020-01-07 13:28:35', NULL),
 (3, 'HamzaM', 'tester@bureauvk.nl', '827ccb0eea8a706c4c34a16891f84e7b', 'tester', '2020-01-07 13:36:30', 1),
-(16, 'Amine', 'Amine@hotmail.com', '$2y$10$IL4oZsaw1yF3jHFvFhqYouYU3', 'jojo25', '2020-01-13 00:17:51', NULL);
+(16, 'Amine', 'Amine@hotmail.com', '$2y$10$IL4oZsaw1yF3jHFvFhqYouYU3', 'jojo25', '2020-01-13 00:17:51', NULL),
+(17, 'Hamza2000', 'Hamza@hotmail.com', '$2y$10$9JRHxF7IH8rgY08azoREB.Vt8', 'adriaen van ostadelaan 25', '2020-01-16 02:02:14', NULL),
+(22, 'hamza2000', 'max@hotmail.com', '$2y$10$TDlmcKsJ9/yaDcRTj5jAf.S/5', '1234', '2020-01-21 23:16:18', 1);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -181,6 +206,12 @@ ALTER TABLE `category`
 --
 ALTER TABLE `order`
   ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexen voor tabel `order_product`
+--
+ALTER TABLE `order_product`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexen voor tabel `product`
@@ -212,10 +243,22 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT voor een tabel `order`
+--
+ALTER TABLE `order`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT voor een tabel `order_product`
+--
+ALTER TABLE `order_product`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT voor een tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Beperkingen voor geëxporteerde tabellen
