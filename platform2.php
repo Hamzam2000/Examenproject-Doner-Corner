@@ -32,30 +32,30 @@ include 'includes/platform.inc.php';
 </ul>
 
 <div id="page-content-wrapper">
-<div class="d-flex" id="wrapper">
+    <div class="d-flex" id="wrapper">
 
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-        <div class="list-group list-group-flush">
-            <a href="platform.php" class="list-group-item list-group-item-action bg-light">Bestellingen</a>
-            <a href="platform2.php" class="list-group-item list-group-item-action bg-light">Afgerond</a>
-            <a href="Statistiek.php" class="list-group-item list-group-item-action bg-light">Statistieken</a>
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="list-group list-group-flush">
+                <a href="platform.php" class="list-group-item list-group-item-action bg-light">Bestellingen</a>
+                <a href="platform2.php" class="list-group-item list-group-item-action bg-light">Afgerond</a>
+                <a href="Statistiek.php" class="list-group-item list-group-item-action bg-light">Statistieken</a>
+            </div>
         </div>
-    </div>
 
-<div class="row">
-<table class="table table-bordered">
-    <div class="container">
-        <br>
-    <h3>Bestellingen</h3>
-            <hr>
+        <div class="row">
+            <table class="table table-bordered">
+                <div class="container">
+                    <br>
+                    <h3>Bestellingen</h3>
+                    <hr>
+                </div>
         </div>
-</div>
-            <?php
-            $result = getOrders();
-            foreach ($result as $key => $row) {
-                ?>
-             <div class="col-md-3">
+        <?php
+        $result = getOrders();
+        foreach ($result as $key => $row) {
+            ?>
+            <div class="col-md-3">
                 <form method="post" action="platform.php">
                     <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="left">
                         <p>Naam: <?php echo $row["naam"]; ?></p>
@@ -86,16 +86,15 @@ include 'includes/platform.inc.php';
                         <input align="right" type="submit" name="check" style="margin-top:5px;" class="btn btn-warning" value="Afgerond" />
                     </div>
                 </form>
-                 <br>
-             </div>
-            <?php } ?>
-</table>
+                <br>
+            </div>
+        <?php } ?>
+        </table>
 
+    </div>
 </div>
-</div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>
-
 

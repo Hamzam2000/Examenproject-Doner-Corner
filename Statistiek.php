@@ -37,6 +37,7 @@ include 'includes/statistiek.inc.php';
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="list-group list-group-flush">
                 <a href="platform.php" class="list-group-item list-group-item-action bg-light">Bestellingen</a>
+                <a href="platform2.php" class="list-group-item list-group-item-action bg-light">Afgerond</a>
                 <a href="Statistiek.php" class="list-group-item list-group-item-action bg-light">Statistieken</a>
             </div>
         </div>
