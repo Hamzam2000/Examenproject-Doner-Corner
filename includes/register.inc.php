@@ -14,7 +14,7 @@
 		if ($password != $cPassword)
 			$msg = "Controleer je wachtwoord!";
 		else {
-            $hash = password_hash($password, PASSWORD_BCRYPT);
+            $hash = password_hash($password, PASSWORD_DEFAULT);
             $conn->query("INSERT INTO user (username,email,password,adress) VALUES ('$username', '$email', '$hash', '$adress')");
 			$msg = "Je bent nu klant!";
 		}
