@@ -9,7 +9,7 @@
 		$email = ($_POST['email']);
 		$password = ($_POST['password']);
 
-        $query = $conn->query("SELECT * FROM user WHERE email='. $email .'");
+        $query = $conn->query("SELECT * FROM user WHERE email='$email'");
 
 		if ($query->rowCount() > 0) {
 			$data = $query->fetch(PDO::FETCH_ASSOC);
