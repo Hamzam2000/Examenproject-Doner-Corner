@@ -22,7 +22,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="Inlog.php">Inloggen</a>
-                    <a class="dropdown-item" href="register.php">registreren</a>
+                    <a class="dropdown-item" href="register.php">Registreren</a>
                     <?php
                     if(isset($_SESSION['logged'])) {
                         echo "<a class=\"dropdown-item\" href=\"logout.php\">Uitloggen</a>";

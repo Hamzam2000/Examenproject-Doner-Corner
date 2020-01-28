@@ -13,7 +13,12 @@
 </head>
 <body>
 
-<?php include "header.php" ?>
+<?php
+
+include "includes/index.inc.php";
+include "header.php"
+
+?>
 
 <header class="masthead text-white text-center">
     <div class="overlay"></div>
@@ -42,24 +47,40 @@
     <hr>
     <div class="row">
     <div class="col-sm-6">
-        <form action="form.php" class="contact-form" method="post">
-
+        <form action="index.php" method="post" class="form-horizontal" role="form">
             <div class="form-group">
-                <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="" autofocus="">
+                <label for="inputName" class="col-lg-2 control-label">Naam</label>
+
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="inputName" name="inputName"
+                           placeholder="Maarten"
+                           value="<?php echo (isset($_POST['inputName']) and !is_null($_POST['inputName'])) ? htmlentities($_POST['inputName']) : ""; ?>"/>
+                </div>
             </div>
 
+            <div class="form-group">
+                <label for="inputEmail" class="col-lg-2 control-label">E-mail</label>
 
-            <div class="form-group form_left">
-                <input type="email" class="form-control" id="email" name="em" placeholder="Email" required="">
+                <div class="col-lg-10">
+                    <input type="email" class="form-control" id="inputEmail" name="inputEmail"
+                           placeholder="denmette@gmail.com"
+                           value="<?php echo (isset($_POST['inputEmail']) and !is_null($_POST['inputEmail'])) ? htmlentities($_POST['inputEmail']) : ""; ?>"/>
+                </div>
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" id="phone" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" placeholder="Mobile No." required="">
+                <label for="inputMessage" class="col-lg-2 control-label">Bericht</label>
+
+                <div class="col-lg-10">
+            <textarea class="form-control" rows="3" id="inputMessage"
+                      name="inputMessage"><?php echo (isset($_POST['inputMessage']) and !is_null($_POST['inputMessage'])) ? htmlentities($_POST['inputMessage']) : ""; ?></textarea>
+                </div>
             </div>
+
             <div class="form-group">
-                <textarea class="form-control textarea-contact" rows="5" id="comment" name="FB" placeholder="Type Your Message/Feedback here..." required=""></textarea>
-                <br>
-                <button class="btn btn-default btn-info"> <span class="glyphicon glyphicon-send"></span> Send </button>
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button type="submit" class="btn btn-warning">Verstuur bericht</button>
+                </div>
             </div>
         </form>
     </div>

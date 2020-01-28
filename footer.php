@@ -35,7 +35,7 @@
                         <a href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="Inlog.php">inloggen</a>
+                        <a href="Inlog.php">Inloggen</a>
                     </li>
                     <li>
                         <a href="register.php">registreren</a>

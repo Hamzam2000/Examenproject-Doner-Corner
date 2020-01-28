@@ -39,13 +39,13 @@ require 'includes/login.inc.php';
             <?php if ($msg != "") echo $msg . "<br><br>"; ?>
 
             <div class="form-group">
-                <label for="inputName">Username</label>
-                <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="email" required>
+                <label for="inputName">Email</label>
+                <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="E-mail" required>
                 <small id="emailHelp" class="form-text text-muted">*Al jou gegevens zijn veilig bij ons.</small>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                <label for="inputPassword">Password</label>
+                <input name="password" type="password" class="form-control" id="inputPassword" placeholder="Password">
             </div>
             <div class="form-group form-check">
                 <a href="register.php">Nog geen account?</a>
