@@ -56,7 +56,7 @@ include 'includes/platform.inc.php';
         foreach ($result as $key => $row) {
             ?>
             <div class="col-md-3">
-                <form method="post" action="platform.php">
+                <form method="post" action="platform2.php">
                     <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="left">
                         <p>Naam: <?php echo $row["naam"]; ?></p>
                         <p>E-mail: <?php echo $row["email"]; ?></p>
@@ -69,7 +69,7 @@ include 'includes/platform.inc.php';
                         <p>Opmerking: <?php echo $row["remarks"]; ?></p>
                         <p>Betalen: <?php echo $row["paymentOption"]; ?></p>
                         <p>Prijs: <?php echo $row["totalPrice"]; ?></p>
-                        <input type="hidden" name="Id" value="<?php echo $key; ?>" />
+                        <input type="hidden" name="Id" value="<?php echo $row["Id"]; ?>" />
                         <input type="hidden" name="naam" value="<?php echo $row["naam"]; ?>" />
                         <input type="hidden" name="email" value="<?php echo $row["email"]; ?>" />
                         <input type="hidden" name="phonenumber" value="<?php echo $row["phonenumber"]; ?>" />

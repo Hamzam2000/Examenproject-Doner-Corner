@@ -17,6 +17,7 @@
 				$row = $query->fetch(PDO::FETCH_ASSOC);
                 $_SESSION['username'] = $data['username'];
 				$_SESSION['id'] = $data['id'];
+                $_SESSION['logged'];
 
 				if ($data['is_admin']) {
                     header("Location: ./platform.php");

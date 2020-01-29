@@ -46,6 +46,7 @@ include "includes/producten.inc.php";
             ?>
             <form method="post" action="producten.php">
                     <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
+                            <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';?>
                             <h5><?php echo $row["Name"]; ?> - $ <?php echo $row["price"]; ?></h5>
                             <input class= "col-md-2" type="text" name="quantity" class="form-control" value="0"/>
                             <input type="hidden" name="Id" value="<?php echo $key; ?>" />
@@ -83,6 +84,7 @@ include "includes/producten.inc.php";
             <form method="post" action="producten.php">
                     <tr>
                         <input type="hidden" name="Id" value="<?php echo $values['Id']; ?>" />
+                        <td><?php echo $values["Name"]; ?></td>
                         <td><?php echo $values["Name"]; ?></td>
                         <td><input align="right" type="submit" name="min" style="margin-top:5px;" class="btn btn-warning" value="-" /> <?php echo $values["quantity"]; ?> <input align="right" type="submit" name="add" style="margin-top:5px;" class="btn btn-warning" value="+" /></td>
                         <td>$ <?php echo $values["price"]; ?></td>

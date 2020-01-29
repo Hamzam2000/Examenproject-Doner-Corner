@@ -69,7 +69,7 @@ include 'includes/platform.inc.php';
                         <p>Opmerking: <?php echo $row["remarks"]; ?></p>
                         <p>Betalen: <?php echo $row["paymentOption"]; ?></p>
                         <p>Prijs: <?php echo $row["totalPrice"]; ?></p>
-                        <input type="hidden" name="Id" value="<?php echo $key; ?>" />
+                        <input type="hidden" name="Id" value="<?php echo $row["Id"]; ?>" />
                         <input type="hidden" name="naam" value="<?php echo $row["naam"]; ?>" />
                         <input type="hidden" name="email" value="<?php echo $row["email"]; ?>" />
                         <input type="hidden" name="phonenumber" value="<?php echo $row["phonenumber"]; ?>" />

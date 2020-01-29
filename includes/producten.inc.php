@@ -4,7 +4,7 @@ require './database.php';
 
 function getProducts(){
     $conn = getdb();
-    $stmt = $conn->prepare("SELECT `Name`, `price` FROM `product` WHERE 1");
+    $stmt = $conn->prepare("SELECT `image`, `Name`, `price` FROM `product` WHERE 1");
     $stmt->execute();
     $result = $stmt->fetchAll();
     return $result;

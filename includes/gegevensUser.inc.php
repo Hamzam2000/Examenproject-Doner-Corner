@@ -37,7 +37,9 @@ if (isset($_POST['Betalen'])) {
 
     $_SESSION["order"] = $payment->id;
 
-
+    /*$stmt = $conn->prepare("INSERT INTO `order_product`
+                                                    (order_id,product_id,quantity)
+                                            VALUES ('$naam', '$email', '$phonenumber')");*/
 
     $stmt = $conn->prepare("INSERT INTO `order` 
                                                     (payment_id,naam,email,phonenumber,companyname,adress,postcode,city,delivery_time,products,remarks,paymentOption,totalPrice) 
