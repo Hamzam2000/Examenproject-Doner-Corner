@@ -25,7 +25,7 @@
                     <a class="dropdown-item" href="register.php">Registreren</a>
                     <?php
                     if(isset($_SESSION['logged'])) {
-                        echo "<a class=\"dropdown-item\" href=\"logout.php\">Uitloggen</a>";
+                        echo ">Uitloggen</a>";
                     }
                     ?>
                 </div>

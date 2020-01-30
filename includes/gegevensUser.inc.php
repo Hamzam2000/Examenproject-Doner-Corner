@@ -5,7 +5,7 @@ require_once  "./vendor/autoload.php";
 $conn = getdb();
 $msg = "";
 
-if (isset($_POST['Betalen'])) {
+if (isset($_POST['Betalen']) && ($_POST['paymentOption']) == 'Online betalen') {
     $naam = ($_POST['naam']);
     $email = ($_POST['email']);
     $phonenumber = ($_POST['phonenumber']);
@@ -47,5 +47,9 @@ if (isset($_POST['Betalen'])) {
     $stmt->execute();
 
     header("Location: " . $payment->getCheckoutUrl(), true, 303);
+} else {
+
+    header( 'Location: ./Betalen.php');
+
 }
 ?>

@@ -8,7 +8,7 @@ include 'includes/platform.inc.php';
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard Klant</title>
+    <title>Dashboard</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
 
@@ -26,7 +26,7 @@ include 'includes/platform.inc.php';
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['username']; ?></a>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="logout.php">Uitloggen</a>
+            <a class="dropdown-item" href="includes/logout.php">Uitloggen</a>
         </div>
     </li>
 </ul>
@@ -39,6 +39,7 @@ include 'includes/platform.inc.php';
         <div class="list-group list-group-flush">
             <a href="platform.php" class="list-group-item list-group-item-action bg-light">Bestellingen</a>
             <a href="platform2.php" class="list-group-item list-group-item-action bg-light">Afgerond</a>
+            <a href="platform3.php" class="list-group-item list-group-item-action bg-light">Koks-overzicht</a>
             <a href="Statistiek.php" class="list-group-item list-group-item-action bg-light">Statistieken</a>
         </div>
     </div>

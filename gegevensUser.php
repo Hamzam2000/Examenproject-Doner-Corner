@@ -90,8 +90,7 @@ require_once __DIR__ . "/vendor/autoload.php";
             <h4 class="mb-3">Betaling</h4>
             <div class="form-group col-6">
                 <select name = "paymentOption" id="inputState" class="form-control">
-                    <option>...</option>
-                    <option>Pinpas</option>
+                    <option>Online betalen</option>
                     <option>Contant</option>
                 </select>
             </div>

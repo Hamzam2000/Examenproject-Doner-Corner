@@ -25,7 +25,7 @@ include 'includes/statistiek.inc.php';
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['username']; ?></a>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="logout.php">Uitloggen</a>
+            <a class="dropdown-item" href="includes/logout.php">Uitloggen</a>
         </div>
     </li>
 </ul>
@@ -38,6 +38,7 @@ include 'includes/statistiek.inc.php';
             <div class="list-group list-group-flush">
                 <a href="platform.php" class="list-group-item list-group-item-action bg-light">Bestellingen</a>
                 <a href="platform2.php" class="list-group-item list-group-item-action bg-light">Afgerond</a>
+                <a href="platform3.php" class="list-group-item list-group-item-action bg-light">Koks-overzicht</a>
                 <a href="Statistiek.php" class="list-group-item list-group-item-action bg-light">Statistieken</a>
             </div>
         </div>
@@ -55,7 +56,7 @@ include 'includes/statistiek.inc.php';
                         <h5>Alle Gebruikers:</h5>
                         <thead>
                         <br>
-                        <tr class='bg-light lt'><td>User ID</td><td>Naam</td><td>email</td><td>leeftijd</td><td>Actie</td></tr>
+                        <tr class='bg-light lt'><td>User ID</td><td>Naam</td><td>email</td><td>Account gemaakt op:</td><td>Actie</td></tr>
                         </thead>
                         <tbody>
 

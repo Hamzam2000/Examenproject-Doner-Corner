@@ -4,6 +4,7 @@
 	$conn = getdb();
 	$msg = "";
 
+
 	if (isset($_POST['submit'])) {
 
 		$email = ($_POST['email']);
@@ -17,7 +18,8 @@
 				$row = $query->fetch(PDO::FETCH_ASSOC);
                 $_SESSION['username'] = $data['username'];
 				$_SESSION['id'] = $data['id'];
-                $_SESSION['logged'];
+                $_SESSION['loggedin'] = 1;
+
 
 				if ($data['is_admin']) {
                     header("Location: ./platform.php");
