@@ -29,15 +29,15 @@ require_once __DIR__ . "/vendor/autoload.php";
 
 
 if ($_SESSION["order"] == "contant") {
-    // Bestelling wordt contant afgerekend
+    // Bestelling wordt contant afgerekend\
+    session_destroy();
 } else {
     // Get Mollie payment and check if its paid
     $mollie = new \Mollie\Api\MollieApiClient();
     $mollie->setApiKey("test_dGNuACWnVCVnCfkhdqjsdWgkKQyjcV");
     $payment = $mollie->payments->get($_SESSION["order"]);
-    $payment1 = $_SESSION["orderContant"];
     
-    if ($payment->isPaid() || $payment1)
+    if ($payment->isPaid())
     {
         $msg = "bestelling gelukt";
         session_destroy();
