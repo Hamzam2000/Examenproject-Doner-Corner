@@ -64,7 +64,7 @@ if (isset($_POST['Betalen']) && ($_POST['paymentOption']) == 'Online Betalen') {
     $total = ($_POST['totalPrice']);
 
 
-    $_SESSION["orderContant"] = $payment->id;
+    $_SESSION["order"] = "contant";
 
     /*$stmt = $conn->prepare("INSERT INTO `order_product`
                                                     (order_id,product_id,quantity)
@@ -72,7 +72,7 @@ if (isset($_POST['Betalen']) && ($_POST['paymentOption']) == 'Online Betalen') {
 
     $stmt = $conn->prepare("INSERT INTO `order` 
                                                     (payment_id,naam,email,phonenumber,companyname,adress,postcode,city,delivery_time,products,remarks,paymentOption,totalPrice) 
-                                            VALUES ('$payment->id','$naam', '$email', '$phonenumber', '$companyname', '$adress', '$postcode', '$city', '$delivery_time', '$products', '$remarks', '$paymentOption','$total')");
+                                            VALUES ('0','$naam', '$email', '$phonenumber', '$companyname', '$adress', '$postcode', '$city', '$delivery_time', '$products', '$remarks', '$paymentOption','$total')");
     $stmt->execute();
 
     header("Location: Betalen.php");
