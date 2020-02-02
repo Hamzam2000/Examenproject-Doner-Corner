@@ -85,7 +85,6 @@ include "includes/producten.inc.php";
                     <tr>
                         <input type="hidden" name="Id" value="<?php echo $values['Id']; ?>" />
                         <td><?php echo $values["Name"]; ?></td>
-                        <td><?php echo $values["Name"]; ?></td>
                         <td><input align="right" type="submit" name="min" style="margin-top:5px;" class="btn btn-warning" value="-" /> <?php echo $values["quantity"]; ?> <input align="right" type="submit" name="add" style="margin-top:5px;" class="btn btn-warning" value="+" /></td>
                         <td>$ <?php echo $values["price"]; ?></td>
                         <td>$ <?php echo number_format($values["quantity"] * $values["price"], 2); ?></td>
