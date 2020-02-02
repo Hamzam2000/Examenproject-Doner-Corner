@@ -146,18 +146,17 @@ require_once __DIR__ . "/vendor/autoload.php";
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="postcode">Postcode</label>
-                        <input name="postcode" type="text" class="form-control" id="Postcode">
+                        <input name="postcode" type="text" class="form-control" id="Postcode" required="">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="city">Stad</label>
-                        <input name="city" type="text" class="form-control" id="Stad">
+                        <input name="city" type="text" class="form-control" id="Stad" required="">
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="deliveryTime">Wanneer wil je je bestelling?</label>
                     <select name="delivery_time" id="deliveryTime" class="form-control" required="">
-                        <option selected>Zo snel mogelijk</option>
                         <option>16:00:00</option>
                         <option>16:30:00</option>
                         <option>17:00:00</option>

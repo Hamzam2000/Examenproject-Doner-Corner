@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aec2eaf3-e3d4-4b64-b036-1957d15a1b5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Betalen.php" beforeDir="false" afterPath="$PROJECT_DIR$/Betalen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/gegevensUser.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/gegevensUser.inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gegevensUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/gegevensUser.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,17 +35,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/gegevensUser.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="66" column="45" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="45" />
+            <state relative-caret-position="627">
+              <caret line="79" column="1" lean-forward="true" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gegevensUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="97" column="85" lean-forward="true" selection-start-line="97" selection-start-column="85" selection-end-line="97" selection-end-column="85" />
+            <state relative-caret-position="442">
+              <caret line="164" column="49" lean-forward="true" selection-start-line="164" selection-start-column="49" selection-end-line="164" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -60,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Betalen.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+            <state relative-caret-position="134">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -177,9 +176,9 @@
         <option value="$PROJECT_DIR$/includes/Checklogin.php" />
         <option value="$PROJECT_DIR$/includes/logout.php" />
         <option value="$PROJECT_DIR$/includes/login.inc.php" />
-        <option value="$PROJECT_DIR$/gegevensUser.php" />
         <option value="$PROJECT_DIR$/includes/gegevensUser.inc.php" />
         <option value="$PROJECT_DIR$/Betalen.php" />
+        <option value="$PROJECT_DIR$/gegevensUser.php" />
       </list>
     </option>
   </component>
@@ -281,12 +280,12 @@
       <workItem from="1578481587474" duration="127000" />
       <workItem from="1578482590319" duration="44120000" />
       <workItem from="1579137450700" duration="58593000" />
-      <workItem from="1580240165363" duration="27437000" />
+      <workItem from="1580240165363" duration="28263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181207000" />
+    <option name="totallyTimeSpent" value="182033000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -671,24 +670,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gegevensUser.php">
+    <entry file="file://$PROJECT_DIR$/Betalen.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="97" column="85" lean-forward="true" selection-start-line="97" selection-start-column="85" selection-end-line="97" selection-end-column="85" />
+        <state relative-caret-position="134">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/gegevensUser.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="66" column="45" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="45" />
+        <state relative-caret-position="627">
+          <caret line="79" column="1" lean-forward="true" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Betalen.php">
+    <entry file="file://$PROJECT_DIR$/gegevensUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state relative-caret-position="442">
+          <caret line="164" column="49" lean-forward="true" selection-start-line="164" selection-start-column="49" selection-end-line="164" selection-end-column="49" />
         </state>
       </provider>
     </entry>
