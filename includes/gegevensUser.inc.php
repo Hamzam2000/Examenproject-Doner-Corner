@@ -47,9 +47,35 @@ if (isset($_POST['Betalen']) && ($_POST['paymentOption']) == 'Online Betalen') {
     $stmt->execute();
 
     header("Location: " . $payment->getCheckoutUrl(), true, 303);
-} else {
 
-    header( 'Location: ./Betalen.php');
+} elseif (isset($_POST['Betalen']) && ($_POST['paymentOption']) == 'Contant'){
+
+    $naam = ($_POST['naam']);
+    $email = ($_POST['email']);
+    $phonenumber = ($_POST['phonenumber']);
+    $companyname = ($_POST['companyname']);
+    $adress = ($_POST['adress']);
+    $postcode = ($_POST['postcode']);
+    $city = ($_POST['city']);
+    $delivery_time = date($_POST['delivery_time']);
+    $products = ($_POST['products']);
+    $remarks = ($_POST['remarks']);
+    $paymentOption = ($_POST['paymentOption']);
+    $total = ($_POST['totalPrice']);
+
+
+    $_SESSION["orderContant"] = $payment->id;
+
+    /*$stmt = $conn->prepare("INSERT INTO `order_product`
+                                                    (order_id,product_id,quantity)
+                                            VALUES ('$naam', '$email', '$phonenumber')");*/
+
+    $stmt = $conn->prepare("INSERT INTO `order` 
+                                                    (payment_id,naam,email,phonenumber,companyname,adress,postcode,city,delivery_time,products,remarks,paymentOption,totalPrice) 
+                                            VALUES ('$payment->id','$naam', '$email', '$phonenumber', '$companyname', '$adress', '$postcode', '$city', '$delivery_time', '$products', '$remarks', '$paymentOption','$total')");
+    $stmt->execute();
+
+    header("Location: Betalen.php");
 
 }
 ?>

@@ -29,8 +29,9 @@ require_once __DIR__ . "/vendor/autoload.php";
 $mollie = new \Mollie\Api\MollieApiClient();
 $mollie->setApiKey("test_dGNuACWnVCVnCfkhdqjsdWgkKQyjcV");
 $payment = $mollie->payments->get($_SESSION["order"]);
+$payment1 = $_SESSION["orderContant"];
 
-if ($payment->isPaid())
+if ($payment->isPaid() || $payment1)
 {
     $msg = "bestelling gelukt";
     session_destroy();
