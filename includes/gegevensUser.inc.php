@@ -5,7 +5,7 @@ require_once  "./vendor/autoload.php";
 $conn = getdb();
 $msg = "";
 
-if (isset($_POST['Betalen']) && ($_POST['paymentOption']) == 'Online betalen') {
+if (isset($_POST['Betalen']) && ($_POST['paymentOption']) == 'Online Betalen') {
     $naam = ($_POST['naam']);
     $email = ($_POST['email']);
     $phonenumber = ($_POST['phonenumber']);
