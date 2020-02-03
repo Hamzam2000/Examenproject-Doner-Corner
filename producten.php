@@ -48,7 +48,7 @@ include "includes/producten.inc.php";
                     <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
                             <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';?>
                             <h5><?php echo $row["Name"]; ?> - $ <?php echo $row["price"]; ?></h5>
-                            <input class= "col-md-2" type="text" name="quantity" class="form-control" value="0"/>
+                            <input class= "col-md-2" type="text" name="quantity" class="form-control" value="1"/>
                             <input type="hidden" name="Id" value="<?php echo $key; ?>" />
                             <input type="hidden" name="Name" value="<?php echo $row["Name"]; ?>" />
                             <input type="hidden" name="price" value="<?php echo $row["price"]; ?>" />

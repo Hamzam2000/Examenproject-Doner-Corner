@@ -3,6 +3,14 @@
 session_start();
 include 'includes/platform.inc.php';
 
+function check_login(){
+    if(empty($_SESSION['username'])){
+        header('Location: ./index.php');
+    }
+}
+
+check_login();
+
 ?>
 <html lang="en">
 <head>
@@ -70,6 +78,7 @@ include 'includes/platform.inc.php';
                         <p>Opmerking: <?php echo $row["remarks"]; ?></p>
                         <p>Betalen: <?php echo $row["paymentOption"]; ?></p>
                         <p>Prijs: <?php echo $row["totalPrice"]; ?></p>
+                        <p>id: <?php echo $row["Id"]; ?></p>
                         <input type="hidden" name="Id" value="<?php echo $row["Id"]; ?>" />
                         <input type="hidden" name="naam" value="<?php echo $row["naam"]; ?>" />
                         <input type="hidden" name="email" value="<?php echo $row["email"]; ?>" />

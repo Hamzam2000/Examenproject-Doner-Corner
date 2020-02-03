@@ -56,7 +56,7 @@ include 'includes/statistiek.inc.php';
                         <h5>Alle Gebruikers:</h5>
                         <thead>
                         <br>
-                        <tr class='bg-light lt'><td>User ID</td><td>Naam</td><td>email</td><td>Account gemaakt op:</td><td>Actie</td></tr>
+                        <tr class='bg-light lt'><td>User ID</td><td>Naam</td><td>email</td><td>Admin</td><td>Account gemaakt op:</td><td>Actie</td></tr>
                         </thead>
                         <tbody>
 
@@ -71,7 +71,8 @@ include 'includes/statistiek.inc.php';
               <td><input type='hidden' name='id' value='" . $row['id'] . "'>" . $row['id'] ."</td>
               <td><input type='hidden' name='username' value='" . $row['username']."'>" . $row['username'] . "</td>
               <td><input type='hidden' name='email' value='" . $row['email']."'>" . $row['email'] . "</td>
-              <td><input type='hidden' name='leeftijd' value='" . $row['create_time'] . "'>" . $row['create_time'] . "</td>
+              <td><input type='hidden' name='admin' value='" . $row['is_admin']."'>" . $row['is_admin'] . "</td>
+              <td><input type='hidden' name='create_time' value='" . $row['create_time'] . "'>" . $row['create_time'] . "</td>
 			  <td><input type='submit' class='btn btn-danger' name='deleteUser' value='Delete'/></td>
             </tr>
           </form>";

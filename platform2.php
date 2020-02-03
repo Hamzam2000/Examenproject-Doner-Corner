@@ -70,6 +70,7 @@ include 'includes/platform.inc.php';
                         <p>Opmerking: <?php echo $row["remarks"]; ?></p>
                         <p>Betalen: <?php echo $row["paymentOption"]; ?></p>
                         <p>Prijs: <?php echo $row["totalPrice"]; ?></p>
+                        <p>id: <?php echo $row["Id"]; ?></p>
                         <input type="hidden" name="Id" value="<?php echo $row["Id"]; ?>" />
                         <input type="hidden" name="naam" value="<?php echo $row["naam"]; ?>" />
                         <input type="hidden" name="email" value="<?php echo $row["email"]; ?>" />
@@ -83,8 +84,7 @@ include 'includes/platform.inc.php';
                         <input type="hidden" name="remarks" value="<?php echo $row["remarks"]; ?>" />
                         <input type="hidden" name="paymentOption" value="<?php echo $row["paymentOption"]; ?>" />
                         <input type="hidden" name="totalPrice" value="<?php echo $row["totalPrice"]; ?>" />
-                        <input align="right" type="submit" name="delete" style="margin-top:5px;" class="btn btn-danger" value="Verwijderen" />
-                        <input align="right" type="submit" name="check" style="margin-top:5px;" class="btn btn-warning" value="Afgerond" />
+                        <input align="right" type="submit" name="delete1" style="margin-top:5px;" class="btn btn-danger" value="Verwijderen" />
                     </div>
                 </form>
                 <br>

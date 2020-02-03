@@ -62,6 +62,7 @@ include 'includes/platform.inc.php';
                         <p>Bezorgen op <?php echo $row["delivery_time"]; ?></p>
                         <p>Producten: <?php echo $row["products"]; ?></p>
                         <p>Opmerking: <?php echo $row["remarks"]; ?></p>
+                        <p>id: <?php echo $row["Id"]; ?></p>
                         <input type="hidden" name="Id" value="<?php echo $row["Id"]; ?>" />
                         <input type="hidden" name="delivery_time" value="<?php echo $row["delivery_time"]; ?>" />
                         <input type="hidden" name="products" value="<?php echo $row["products"]; ?>" />

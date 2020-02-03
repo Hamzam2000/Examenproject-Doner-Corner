@@ -19,10 +19,22 @@ $res3 = $dbhandle3->query($query3);
 
 function getUsers() {
     $conn = getdb();
-    $stmt = $conn->prepare("SELECT `id`, `username`, `email`, `create_time` FROM user ORDER BY `create_time`");
+    $stmt = $conn->prepare("SELECT `id`, `username`, `email`, `create_time`, `is_admin` FROM user ORDER BY `create_time`, `user`.`is_admin` DESC");
     $stmt->execute();
     $result = $stmt->fetchAll();
     return $result;
+}
+
+if(isset($_POST['deleteUser'])){
+    $conn = getdb();
+    $id = $_POST['id'];
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $create_time = $_POST['create_time'];
+    $is_admin = $_POST['is_admin'];
+    $stmt = $conn->prepare("DELETE FROM `user` WHERE Id = \" $id \" ");
+    $stmt->execute();
+    header('Location: ./Statistiek.php');
 }
 
 ?>
