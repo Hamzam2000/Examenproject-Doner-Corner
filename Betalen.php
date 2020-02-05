@@ -32,7 +32,7 @@ if ($_SESSION["order"] == "contant") {
     // Bestelling wordt contant afgerekend\
     session_destroy();
 } else {
-    // Get Mollie payment and check if its paid
+    // Get Mollie payment and check of het is betaald
     $mollie = new \Mollie\Api\MollieApiClient();
     $mollie->setApiKey("test_dGNuACWnVCVnCfkhdqjsdWgkKQyjcV");
     $payment = $mollie->payments->get($_SESSION["order"]);

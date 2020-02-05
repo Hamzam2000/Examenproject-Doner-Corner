@@ -24,8 +24,8 @@
                     <a class="dropdown-item" href="Inlog.php">Inloggen</a>
                     <a class="dropdown-item" href="register.php">Registreren</a>
                     <?php
-                    if(isset($_SESSION['logged'])) {
-                        echo ">Uitloggen</a>";
+                    if(!empty($_SESSION['username'])){
+                       echo '<a class="dropdown-item" href="index.php">Uitloggen</a>';
                     }
                     ?>
                 </div>

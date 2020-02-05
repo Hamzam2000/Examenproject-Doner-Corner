@@ -4,7 +4,7 @@ require_once './database.php';
 require_once  "./vendor/autoload.php";
 $conn = getdb();
 $msg = "";
-
+// checken hoe de klant wil betalen en gegevens opslaan van de bestelling
 if (isset($_POST['Betalen']) && ($_POST['paymentOption']) == 'Online Betalen') {
     $naam = ($_POST['naam']);
     $email = ($_POST['email']);
@@ -19,7 +19,7 @@ if (isset($_POST['Betalen']) && ($_POST['paymentOption']) == 'Online Betalen') {
     $paymentOption = ($_POST['paymentOption']);
     $total = ($_POST['totalPrice']);
 
-
+// mollie
     $mollie = new \Mollie\Api\MollieApiClient();
     $mollie->setApiKey("test_dGNuACWnVCVnCfkhdqjsdWgkKQyjcV");
     $payment = $mollie->payments->create([

@@ -3,7 +3,7 @@
 	require_once './database.php';
 	$conn = getdb();
 	$msg = "";
-
+// gebruiker gaat registreren
 	if (isset($_POST['submit'])) {
 		$username = ($_POST['username']);
 		$email = ($_POST['email']);

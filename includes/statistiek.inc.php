@@ -1,7 +1,7 @@
 <?php
 
 require './database.php';
-
+// Statistieken uit database
 $dbhandle = new mysqli('localhost','root','','dcveen');
 echo $dbhandle->connect_error;
 $query = "SELECT `paymentOption`, COUNT(Id) FROM `order` group by `paymentOption`";
@@ -36,7 +36,7 @@ if(isset($_POST['deleteUser'])){
     $stmt->execute();
     header('Location: ./Statistiek.php');
 }
-
+ // Admin beheer (rechten geven en afnemen)
 if(isset($_POST['Admin'])){
     $conn = getdb();
     $id = $_POST['id'];

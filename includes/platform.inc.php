@@ -57,7 +57,7 @@ if(isset($_POST['delete'])){
     $stmt->execute();
     header('Location: ./platform.php');
 }
-
+// bestellingen verwijderen
 if(isset($_POST['delete1'])){
     $conn = getdb();
     $Id = $_POST['Id'];
@@ -97,7 +97,7 @@ if(isset($_POST['deletekok'])){
     $stmt->execute();
     header('Location: ./platform3.php');
 }
-
+// bestellingen afronden
 if(isset($_POST['check'])){
     $conn = getdb();
     $Id = $_POST['Id'];

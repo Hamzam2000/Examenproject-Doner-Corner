@@ -4,7 +4,7 @@
 	$conn = getdb();
 	$msg = "";
 
-
+// inlog check met mail en password default
 	if (isset($_POST['submit'])) {
 
 		$email = ($_POST['email']);

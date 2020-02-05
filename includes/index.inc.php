@@ -43,7 +43,7 @@ if ('POST' === $_SERVER['REQUEST_METHOD'] and isset($_POST['inputName'], $_POST[
 
     // Als het aantal errors 0 is dan kunnen we een mailtje versturen
     if (0 == count($errors)) {
-        // Dit is voor een mooi mailtje te bekomen.
+        // Dit is voor een mooi mailtje.
         $headers = 'From: ' . $name . ' <' . $email . '>' . "\r\n";
         $headers .= 'Reply-To: ' . $name . ' <' . $email . '>' . "\r\n";
         $headers .= 'X-Mailer: PHP/' . phpversion() . "\r\n";

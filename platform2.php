@@ -54,6 +54,7 @@ include 'includes/checklogin.php';
                     <hr>
                 </div>
         </div>
+        <!-- Afgeronden bestellingen laten zien -->
         <?php
         $result = getDoneOrders();
         foreach ($result as $key => $row) {

@@ -33,9 +33,9 @@
  <div class="col-md-6 offset-md-3"> 
 <form method="post" action="register.php">
  <img class="mb-4" src="image/logo.png" alt="" width="144" height="72">
- 
-	<?php if ($msg != "") echo $msg . "<br><br>"; ?>
 
+    <br><br><?php if ($msg != "") echo $msg . "<br><br>"; ?>
+    <!-- Form van registratie -->
     <div class="form-group">
       <label for="inputName">Username</label>
       <input name="username" type="text" class="form-control" id="inputName" placeholder="Username" required>

@@ -54,6 +54,7 @@ include 'includes/checklogin.php';
                     <hr>
                 </div>
         </div>
+        <!-- bestellingen voor kok -->
         <?php
         $result = getOrders();
         foreach ($result as $key => $row) {

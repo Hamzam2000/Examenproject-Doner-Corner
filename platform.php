@@ -53,6 +53,7 @@ include 'includes/checklogin.php';
             <hr>
         </div>
 </div>
+    <!-- betselling laten zien voor beheerder -->
             <?php
             $result = getOrders();
             foreach ($result as $key => $row) {

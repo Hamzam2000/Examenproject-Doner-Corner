@@ -44,6 +44,7 @@ include "includes/producten.inc.php";
             $result = getProducts();
             foreach ($result as $key => $row) {
             ?>
+                <!-- producten uit database halen en laten zien -->
             <form method="post" action="producten.php">
                     <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
                             <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';?>
@@ -72,6 +73,7 @@ include "includes/producten.inc.php";
                 <th>Total</th>
                 <th>Action</th>
             </tr>
+            <!-- jouw bestelling laten zien in lijst-->
             <?php
             if(!empty($_SESSION["shopping_cart"]))
             {

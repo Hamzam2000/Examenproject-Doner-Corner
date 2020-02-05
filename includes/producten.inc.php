@@ -9,7 +9,7 @@ function getProducts(){
     $result = $stmt->fetchAll();
     return $result;
 }
-
+// product in winkelmandje plaatsen
 session_start();
 if(isset($_POST["addProducts"]))
 {
