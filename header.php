@@ -14,7 +14,7 @@
                 <a class="nav-link" href="producten.php">Bestellen</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="reviews.php">Reviews</a>
+                <a class="nav-link" href="#">Reviews</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

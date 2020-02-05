@@ -33,7 +33,6 @@
  <div class="col-md-6 offset-md-3"> 
 <form method="post" action="register.php">
  <img class="mb-4" src="image/logo.png" alt="" width="144" height="72">
- <h1 class="h3 mb-3 font-weight-normal">Wordt klant!</h1>
  
 	<?php if ($msg != "") echo $msg . "<br><br>"; ?>
 

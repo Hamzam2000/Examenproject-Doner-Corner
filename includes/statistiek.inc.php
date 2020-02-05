@@ -37,4 +37,30 @@ if(isset($_POST['deleteUser'])){
     header('Location: ./Statistiek.php');
 }
 
+if(isset($_POST['Admin'])){
+    $conn = getdb();
+    $id = $_POST['id'];
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $is_admin = $_POST['is_admin'];
+    $create_time = $_POST['create_time'];
+    $stmt = $conn->prepare("UPDATE `user` SET `is_admin` = '1' WHERE Id = \" $id \" ");
+    $stmt->execute();
+    header('Location: ./Statistiek.php');
+
+}
+
+if(isset($_POST['Adminverwijderen'])){
+    $conn = getdb();
+    $id = $_POST['id'];
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $is_admin = $_POST['is_admin'];
+    $create_time = $_POST['create_time'];
+    $stmt = $conn->prepare("UPDATE `user` SET `is_admin` = '' WHERE Id = \" $id \" ");
+    $stmt->execute();
+    header('Location: ./Statistiek.php');
+
+}
+
 ?>

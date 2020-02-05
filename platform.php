@@ -2,14 +2,7 @@
 <?php
 session_start();
 include 'includes/platform.inc.php';
-
-function check_login(){
-    if(empty($_SESSION['username'])){
-        header('Location: ./index.php');
-    }
-}
-
-check_login();
+include 'includes/checklogin.php';
 
 ?>
 <html lang="en">

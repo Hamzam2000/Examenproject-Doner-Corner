@@ -2,8 +2,10 @@
 <?php
 session_start();
 include 'includes/platform.inc.php';
+include 'includes/checklogin.php';
 
 ?>
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
